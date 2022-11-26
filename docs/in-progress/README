@@ -1,0 +1,3 @@
+Den alldeles lysande installationsmanualen för portfolioprojekten utförda i kursen TDP003 skriven av IP1 år 2018.
+
+Kompilera med "latexmk -pvc -xelatex installationsmanual.tex" eller "latexmk -xelatex installationsmanual.tex".

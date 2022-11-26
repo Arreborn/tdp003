@@ -1,0 +1,19 @@
+Referenshantering
+
+Följande länkar refererar till de bilder, ikoner och skript som har hittats på nätet, inklusive eventuella CC-licenser som hör till.
+
+Ikoner
+https://uxwing.com/
+CC0 (Ingen attrubituion krävs)
+
+Bilder
+https://pxhere.com/en/photo/953318
+https://pixabay.com/photos/briefcase-leather-goods-accessories-1578138/
+https://pixabay.com/photos/server-cloud-development-business-1235959/
+https://pixabay.com/photos/network-server-system-2402637/
+https://pixabay.com/photos/high-level-rack-warehouse-range-408222/
+Samtliga bilder har licensen CC0 (Ingen attribution krävs)
+
+Fonts
+https://fonts.google.com/
+Open source

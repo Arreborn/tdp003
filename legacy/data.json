@@ -1,0 +1,92 @@
+[
+    {
+
+        "project_name": "Hemsida i HTML",
+        "project_id": 2,
+        "start_date": "2022-09-28",
+        "end_date": "2022-10-19",
+        "course_id": "TDP003",
+        "course_name": "Egna datamiljöer",
+        "academic_credits": " 6 hp",
+        "techniques_used": [
+            "Python",
+            "JAVA"
+        ],
+
+        "short_description": "Projektets resultat skapade en webbsida av HTML/CSS. Webbsidan information kommer från en JSON-fil och tas emot och kompileras utefter sökta egenskapar,med hjälp av en python-fil",
+        "long_description": "Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer.Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.",
+        "small_image": "static/images/logo.png",
+        "big_image": "static/images/profile.png",
+        "group_size": "2",
+        "external_link": "https://uxwing.com/github-icon/",
+        "github": "https://gitlab.liu.se/lovar063/portfolio"
+    },
+
+    {
+
+        "project_name": "Blogg",
+        "project_id": 1,
+        "start_date": "2022-08-28",
+        "end_date": "2022-10-15",
+        "course_id": "TDP001",
+        "course_name": "Handhavande av datamiljöer",
+        "academic_credits": " 4 hp",
+        "techniques_used": [
+            "HTML", "Java"
+        ],
+
+        "short_description": "Detta projektet skapar en blogg från en HTML och CSS.fil. Bloggen måste ha med datum på senaste uppderade version, samt författare. Bloggen hade inga specefika krav på utseende.",
+
+        "long_description": "Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer.Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer.Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.",
+        "small_image": "static/images/logo.png",
+        "big_image": "static/images/profile.png",
+        "group_size": "1",
+        "external_link": "https://www.ida.liu.se/~TDP003/current/projekt/lectures.sv.shtml",
+        "github": "https://gitlab.liu.se/lovar063/portfolio"
+    },
+
+    {
+        "project_name": "Deepwebb shit",
+        "project_id": 30,
+        "start_date": "2006-09-28",
+        "end_date": "2006-10-19",
+        "course_id": "TDP003",
+        "course_name": "Hacking 101",
+        "academic_credits": " 10000 hp",
+        "techniques_used": [
+            "Python",
+            "Ada"
+        ],
+
+        "short_description": "Detta är en helt påhittad kurs om hur man är en hacker-101. Shut down the grid. Rob the rich and give to the poor. Detta borde dock bli en kurs på LiU, tänk vad kul att logga in och boka alla salar #power",
+        "long_description": "Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer.Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.",
+        "small_image": "static/images/logo.png",
+        "big_image": "static/images/profile.png",
+        "group_size": "69",
+        "external_link": "https://helloworld.se/",
+        "github": "https://gitlab.liu.se/lovar063/portfolio"
+    },
+
+    {
+        "project_name": "C ++ grunder",
+        "project_id": 4,
+        "start_date": "2022-09-28",
+        "end_date": "2022-10-19",
+        "course_id": "TDP003",
+        "course_name": "C ++ egen design",
+        "academic_credits": " 6 hp",
+        "techniques_used": [
+            "Ada",
+            "C++"
+        ],
+
+        "short_description": "Denna kursen kommer någon gång. Vet bara inte när den kommer. Wow vad skoj.  C++ kommer nog vara en rolig kurs, om man orkar med den. C++ liknar C# på så sätt att det används mest i programmering av system, program och spell.",
+        "long_description": "Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer.Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.",
+        "small_image": "static/images/logo.png",
+        "big_image": "static/images/profile.png",
+        "group_size": "2",
+        "external_link": "https://google.se/",
+        "github": "https://gitlab.liu.se/lovar063/portfolio"
+    }
+
+]

@@ -1,0 +1,389 @@
+\documentclass{TDP003mall}
+
+\usepackage[swedish]{babel}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{tabularx}
+
+\newcommand{\version}{Version 1.0}
+\author{Love Arreborn, \url{lovar063@student.liu.se}\\
+  Tove Winddotter, \url{tovwi303@student.liu.se}}
+\title{Projektplan}
+\date{2022-09-29}
+\rhead{Love Arreborn\\Tove Winddotter}
+
+\begin{document}
+\projectpage
+\pagebreak
+\tableofcontents
+
+\pagebreak
+
+\section*{Revisionshistorik}
+\addcontentsline{toc}{section}{\protect\numberline{}Revisionshistorik}%
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+Version & Revisionsbeskrivning                         & Datum \\ \hline
+1.0     & Projektplan - Första version                 & 30/9  \\ \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Datumen projektplanen har reviderats.}
+  \end{table}
+
+\pagebreak
+
+\section*{Introduktion till Projekt: Egna datamiljöer}
+\addcontentsline{toc}{section}{\protect\numberline{}Introduktion till Projekt: Egna datamiljöer}%
+
+Projektets mål är att skapa en portfolio-programvara i Python, som sedan ska kunna vara till hjälp med dokumentation av kommande projekt. Portfolion ska skapas som en webbplats. Webbplatsen kommer att bestå av två huvuddelar: ett datalager och presentationslager. Datalagret kommer sedan att specificeras med ett API (Application Programming Interface) som kommer att användas som en modul med specifikationer. Detta kommer även användas av presentationslagret för att hämta information från datafilen. Presentationslagrets uppgift är att avbilda den informationen som användaren har begärt på ett fint och tydligt sätt. Detta görs genom att presentationslagret genererar en HTML-kod med innehåll från datalagret som därefter ska sändas till användaren.
+
+Projektet kommer även inomfatta ett delmoment där en installationsmanual skapas. Denna manual är skapad så att andra ska kunna installera och använda portfolion.
+
+\subsection*{Datalagret}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Datalagret}%
+Datalagrets arbetsuppgift är att hantera datan i systemet, och specificeras med ett API. Datalagret kommer att lagras i en JSON-fil (JavaScript Object Notation). \href{https://www.ida.liu.se/~TDP003/current/portfolio-api_python3/}{Fullständig kravspecifikation för datalagret finns publicerat på kurshemsidan}.
+
+Medan den fullständiga tekniska kravspecifkationen återfinns på kurshemsidan så noteras nedan en sammanfattning av kraven på datalagret:\\
+
+- Systemet ska kunna hantera följande information om ett projekt: projektnamn, projekt-ID-nummer, startdatum, slutdatum, kurskod, kursnamn, kurspoäng, använda tekniker, kort beskrivning, lång beskrivning, liten och stor bild, gruppstorlek och en länk projektsida. Projektnamn och projekt-id är obligatoriska, övriga fält kan lämnas tomma.
+
+- Projekt-ID ska vara ett unikt heltal för varje projekt.
+
+- Varje projekt kan ha en sekvens av tekniker angivna.
+
+- Sökning ska kunna göras på godtycklig projektinformation, samt ska kunna utföras med flera valda tekniker.
+
+- Sortering ska kunna göras på ett fält, i stigande och fallande träffordning.
+
+- Man ska kunna filtrera utifrån använda tekniker i sökningen.
+
+{Allt ovanstående ska fungera tillsammans, så att man kan söka på ett sökord, filtrera till vissa tekniker och sortera söklistan i en viss ordning samtidigt.}
+\\
+
+- Data lagras i en JSON-fil (JavaScript Object Notation) vid namn data.json.
+
+- Filen ska lagras med UTF-8 teckenkodning.
+
+- Data läggs till i JSON-filer manuellt (eller av andra verktyg) i systemet.
+
+- Förändring av data.json ska slå igenom direkt i systemet utan omstart av webbserver.\\
+
+Tekniker som behövs till datalagret är Python3 och JSON.
+
+\subsection*{Presentationslagret}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Presentationslagret}%
+ Presentationslagret kommer med hjälp av information från en JSON-datafil som hanteras av datalagret presentera projekt.
+Presentationslagret skall bestå av fyra sidor:
+
+- Index är förstasidan innehåller en kort personlig presentation.
+
+- List kommer att visualisera projekt, sorterade efter använda programmeringstekniker.
+
+- Projekt är en dynamisk sida som informerar mer detaljrik information om ett valt projekt. Med alla projekt tillgängliga för detaljvisning.
+
+- Söksida är sidan som låter användaren se en lista av alla projekt samt sökfunktionalitet för att filtrera bland befintliga sökfilter.
+
+Tekniker som behövs till presentationslagret är HTML/CSS, Flask, JavaScript och Jinja.
+
+\subsection*{Metodik}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Metodik}%
+ Schema för arbetet kommer att läggas upp från vecka till vecka, och arbetet kommer ske både tillsammans till stor del, men även parallellt för de mindre arbetsuppgifterna samt korrekturläsningar. Ett fysiskt veckomöte hålls 08:15 varje torsdag, samt att daglig uppdatering sker antingen digitalt eller fysiskt.
+
+ Tidsplanen av veckorna under baseras på de redan schemalagda arbetstiderna på campus.
+
+ Alla versioner av projektets kod kommer att finnas tillgängligt via Git. Vid mindre arbete med specifika delar av projektet kommer man att fylla i Jira innan, under och efter delen är klar för att tydliggöra för partnern vad som gjorts, och vad som är kvar att göra.
+
+ Arbetet skall utföras i god tid innan kursens schemalagda hårda deadlines, med god marginal för att hinna genomföra korrigeringar om behov uppstår, såsom att ett delmoment fördröjer projektet. Detta ger milstolpar som projektgruppen har angivit på egen hand och jobbar utefter. Dessa milstolpar kommer att minska riskerna, såsom att eventuella problem eller buggar som uppstår under arbetets gång som behöver åtgärdas.
+
+ \subsection*{Risker}
+ \addcontentsline{toc}{subsection}{\protect\numberline{}Risker}%
+ Gruppens dokumentation av arbetet i Jira samt att all kod finns lagrad på GitLab kommer att minska risken för förvirring om en partner skulle utebli eller avsluta sin utbildning, och arbetet därefter måste fortsättas utan hen. Då vi diarieför allt arbete genom Jira kan samtliga projektdeltagare kontrollera nuvarande status på arbetet och kommunicera med restrerande gruppdeltagare genom kommentarer i Jira, vilket i sin tur gör att arbetet kan fortskrida enligt tidsplan även vid sjukdom.
+
+\pagebreak
+
+\subsection*{Projektöversikt}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Projektöversikt}%
+I tabell 2. nedan listas samtliga hårda deadlines i kursen, samt en ungefärlig uppskattad tidsåtgång för dessa moment. Allt eftersom dessa genomförs kompletteras dokumentet med den faktiska tiden som ägnats åt vardera deadline.
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|}
+\hline
+Deadline & Delmoment av projekt   & Avsatt tid & Faktiska tid\\ \hline
+    8/9  & Gruppkontrakt inlämnad      & 4h     & 4h      \\ \hline
+    13/9 & Tidsplanering inlämnad   & 3h     & 3h       \\ \hline
+    16/9 & LoFi-prototyp skapad och inskickad  & 5h    & 6h    \\ \hline
+    22/9 & Första utkastet av projektplanen klar och inlämnad & 7h & 6h \\ \hline
+    22/9 & Första versionen av den gemensamma installationsmanualen & 5h  & 2h  \\ \hline
+    29/9  & Sammanställning av den gemensamma installationsmanualen  & 2h  &   \\ \hline
+    30/9 & API/Datalager färdigställt och godkänt av assistent & 4h  & \\ \hline
+    13/10 & Fungerande prototyp av hemsidan som kan samspela med datalagret & 5h &   \\ \hline
+    13/10 & Portfolio tillgänglig via openshift  & 4h     &     \\ \hline
+    13/10 & Första versionen av systemdokumentationen inlämnad  & 3h  & \\ \hline
+    20/10 & Testdokumentationen inlämnad  & 3h   &     \\ \hline
+    20/10 & Individuellt reflektionsdokument inlämnat  & 1h   &  \\ \hline
+    20/10 & Eventuella brister i systemdokumentationen korrigerade  & 3h        &  \\ \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Samtliga hårda deadlines för projektet, inklusive planerad avsatt tid samt faktisk arbetstid.}
+\end{table}
+
+\pagebreak
+
+\section*{Tidsplanering}
+\addcontentsline{toc}{section}{\protect\numberline{}Tidsplanering}
+Följande tidsplanering kommer att inomfatta alla deadlines samt en övergripande bild av hur varje vecka kommer att vara uppbyggd, med väldefinierade aktiviteter för samtliga deadlines. Under denna sektion kommer gruppens milstolpar att markeras som blått, medan hårda deadlines markeras som rött.
+
+\subsubsection*{Vecka 36}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 36}
+
+Denna vecka är projektets huvudsakliga fokus att få till grundläggande dokumentation, mer bestämt gruppkontraktet samt tidsplanen. Dessutom inleds förstudiefasen, där vi kontrollerar viss tillhandahållen dokumentation såsom API-specifikationen.\\
+\\
+Hård deadline
+\begin{itemize}
+\color{red}
+    \item 8/9 Gruppkontrakt inlämnad
+\end{itemize}
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+\hline
+Delmoment     & Aktivitet       & Prioritet  & Avsatt tid & Faktiska tid \\ \hline
+    \multirow{3}{*}{Gruppkontrakt} & Skapa dokument och huvudsida till gruppkontrakt & 1      & 0,5h       & 0,5h     \\ \cline{2-5}
+         & Villkor för gruppkontraktet dokumenteras         & 1       & 2h     &    2h \\ \cline{2-5}
+         & Korrekturläs och lämna in gruppkontrakt  & 1       & 1h      & 1h      \\ \hline
+    Tidsplan & Skapa och påbörja dokumentation av tidsplaneringen   & 2 & 3h        & 2h  \\ \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.36.}
+\end{table}
+
+\pagebreak
+
+\subsubsection*{Vecka 37}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 37}
+
+Förstudiefasen fortsätter under denna vecka, då tidsplan och projektplan ska färdigställas. Dessutom påbörjas designen av webbplatse i och med att LoFi-prototypen ska skapas och lämnas in. Gruppen valde att göra LoFi-prototypen direkt i HTML och CSS för att ha ett gediget ramverk att utgå ifrån när presentationslagret senare ska designas under vecka 40. Kontroll av dokumentation ska även vara klar denna vecka, så att vi nästkommande vecka kan avrunda förstudiefasen och påbörja det praktiska arbetet.
+\\
+\\
+Milstolpar
+\begin{itemize}
+\color{blue}
+    \item 16/9 Första utkast av projektplanen klar
+\end{itemize}
+
+Hård deadline
+\begin{itemize}
+\color{red}
+    \item 13/9 Lämna in tidsplan
+
+    \item 16/9 LoFi-prototyp inlämnad
+\end{itemize}
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+\hline
+Delmoment  & Aktivitet   & Prioritet  & Avsatt tid & Faktiska tid\\ \hline
+    Tidsplan  & Färdigställt dokument för inlämning   & 1   & 2h    & 2h    \\ \hline
+    \multirow{4}{*}{LoFi} &  Utforminng av alla sidtyper i prototypen & 1   & 1h    & 2h     \\ \cline{2-5}
+             & Korrekturkontroll och debugging   & 1   & 0,5h   & 0,5h   \\ \cline{2-5}
+             & Grundläggande design i HTML och CSS     & 2 & 1h   & 2h \\ \cline{2-5}
+                & Extra funktionalitet i JavaScript & 3   & 1h   & 1h     \\  \hline
+    Projektplan  & Skapa ett första utkast av projektplanen & 2   & 4h   & 3h     \\ \hline
+    Installationsmanual & Studera den påbörjade installationsmanualen  & 3 & 2h    & 1h \\ \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.37}
+\end{table}
+
+Kommentar: Komplettering på LoFi-prototypen inkom den 20/9, och korrigerades dagen efter. Ny version skickas in till assistenten för rättning.
+Tidsplanen skickades in den 16/9 och behövde inga kompletteringar.
+\\
+
+\pagebreak
+
+\subsubsection*{Vecka 38}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 38}
+
+De sista momenten i förstudiefasen slutförs denna vecka, då den sista förberedande dokumentationen lämnas in denna vecka. Tid har även lagts undan för att hantera de eventuella kompletteringar som inkommit på denna dokumentation för att säkerställa att den når upp till kraven.
+
+Det praktiska arbetet med datalagret påbörjas även denna vecka, då specifikationen till datalagret ska studeras noga under slutet på denna vecka. Enligt plan ska datalagret kunna skrivas, testas och färdigställda under nästa vecka.\\
+\\
+Milstolpar
+\begin{itemize}
+\color{blue}
+    \item Installationsmanual ska vara färdig
+\end{itemize}
+
+Hård deadline
+
+\begin{itemize}
+\color{red}
+    \item 22/9 Första utkast av projektplan inlämnad
+
+    \item 22/9 Skicka in
+installationsmanual
+\end{itemize}
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+\hline
+Delmoment                            & Aktivitet                                                           & Prioritet & Avsatt tid & Faktiska tid \\ \hline
+Projektplan                          & Korrekturläst och färdigställt dokument för inlämning                             & 1         & 3h         & 2h           \\ \hline
+\multirow{2}{*}{Installationsmanual} & Hämta ner och redigera den gemensamma installationsmanualen         & 1         & 2h         & 1h           \\ \cline{2-5}
+                                     & Pusha upp nya versionen på Github och hantera eventuella konflikter & 1         & 1h         & 0,5h         \\ \hline
+LoFi                                 & Komplettering av LoFi-prototypen efter rättning                     & 2         & 1h         & 0,25h        \\ \hline
+Datalagret                           & Studera datalagrets specifikationer på \href{https://www.ida.liu.se/~TDP003/current/portfolio-api_python3/}{kurshemsidan}  & 3         & 1h         & 0,5h         \\ \hline
+    \end{tabularx}
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.38}
+\end{table}
+
+Kommentar: Första utkastet av projektplanen kompilerades och skickades in den 22/9. Arbete på installationsmanualen skedde individuellt.
+
+\pagebreak
+\subsubsection*{Vecka 39}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 39}
+
+Denna vecka ligger gruppens primära fokus datalagret -- både att skriva koden för det, samt att säkerställa att datalagret passerar alla tester. Dock så finns det överskådlig risk att viss tidigare dokumentation mottagit kompletteringar runt denna tid, vilket vi har schemalagt tid för att rätta.
+
+Slutligen så har vi undanlagt extra tid för att påbörja systemdokumentationen i mån av tid, men detta beror helt på utfallet från datalagrets tester samt övriga kompletteringar.
+\\
+\\
+Hård deadline
+
+\begin{itemize}
+\color{red}
+    \item 29/9 Eventuella korregeringar till projektplan, installationsmanual eller Git
+
+    \item 30/9 Datalagret godkänt av assistent
+\end{itemize}
+
+\begin{table}[h]
+{\centering\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+  \hline
+    Delmoment & Aktivitet & Prioritet & Avsatt tid & Faktiska tid\\ \hline
+    Korrigeringar        & Eventuellt korrigera datalagret, installationsmanualen projektplan eller Git  & 1   & 5h       & 5h    \\  \hline
+    \multirow{3}{*}{Datalager} & Skriva funktioner för API:t utefter specifikationskraven       & 1        & 3h         &  2h          \\ \cline{2-5}
+        & Godkännande av datalager av assistent      & 1    & 0,5h     &      \\  \cline{2-5}
+        & Tester av datalagret, samt rättningar vid eventuella misslyckade tester    & 2      & 1h         &  3h          \\  \hline
+    Systemdokumentation & Påbörja dokumentation av kodens funktioner och dokumentera vilka diagram som ska skapas     & 3 & 3h     &    \\
+     \hline
+\end{tabularx}\par}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföra v.39}
+
+\end{table}
+
+Kommentar: Kompletteringen för projektplanen var relativt omfattande, men har inte påverkat tidplaneringen något markant. Att skriva första versionen av datalagret gick snabbare än väntat, medan testerna och korrigering av datalagret för att klara testerna tog mer tid än väntat. Däremot ligger vi fortfarande i fas med vår ursprungliga planering.
+
+\pagebreak
+
+\subsubsection*{Vecka 40}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 40}
+
+Den bakomliggande strukturen för portfolion ska nu vara klart, och enligt plan ska två moment påbörjas denna vecka -- presentationslagret samt systemdokumentationen. Enligt planeringen ska presentationslagret vara tillräckligt färdigt för att kunna testas och hela portfolion bör kunna publiceras under nästa vecka.
+
+Systemdokumentationen måste även påbörjas denna vecka så att det första utkastet kan lämnas in. Tid läggs undan nästa vecka för att hantera eventuella kompletteringar som inkommer gällande detta. I mån av tid kan den gemensamma installationsmanualen även studeras för att se om denna kräver någon revision för gruppens egna installation.
+\\
+\\
+Milstolpar
+\begin{itemize}
+\color{blue}
+    \item 7/10 Skicka in första version av systemdokumentation
+\end{itemize}
+
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+  \hline
+Delmoment & Aktivitet & Prioritet & Avsatt tid & Faktiska tid\\ \hline
+    \multirow{2}{*}{Systemdokumentation}  & Skapa och infoga alla diagram           & 1   & 3h         &     \\ \cline{2-5}
+        & Korrekturläsa och skicka in dokument     & 1   & 2h       &     \\\hline
+    \multirow{2}{*}{Presentationslager}   & Få in data från datalagret till presentationslagret  & 2 & 3h         &     \\  \cline{2-5}
+        & Koppla presentationslagret till befintlig HTML-kod från LoFi-prototypen & 2 & 2h         &     \\  \hline
+        Reflektionsdokument  & Påbörja individuell reflektionsdokumentation av avklarade delmoment                                   & 2   & 1h         &     \\   \hline
+        Testdokumentation    & Påbörja minst en testning och dokumentera eventuella fel.   & 3 & 2h    &     \\  \hline
+        Installationsmanual  & Kontroll av den gemensamma installationsmanualen samt revision av denna för att motsvara de krav som finns för vår portfolio                                   & 3   & 1h         &     \\   \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.40}
+
+\end{table}
+
+Kommentar:
+
+\pagebreak
+
+\subsubsection*{Vecka 41}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 41}
+
+I detta skede ska datalagret och presentationslagret båda vara slutförda och sammankopplade, så att portfolion är redo för användartestning och publikation. Även testerna ska dokumenteras under tiden som de utförs. Det slutgiltiga momentet är därefter att sammanställa den sista dokumentationen, mer bestämt systemdokumentationen samt testdokumentationen, samt att eventuell revision av den gemensamma installationsmanualen förväntas vara färdigställd.
+
+Vidare så ska samtliga deltagare i gruppen påbörja reflektionsdokumentet.
+\\
+\\
+Milstolpar
+\begin{itemize}
+\color{blue}
+    \item 10/10 Slutföra koppling av datalagret och presentationslagret, samt färdigställande av presentationslagrets design och utseende
+\end{itemize}
+Hård deadline
+
+\begin{itemize}
+\color{red}
+    \item 13/10 Systemdemonstration för andra grupper, grund till
+testdokumentation
+    \item 13/10 Portfolio publicerad
+    \item 13/10 Första version av systemdokumentation inlämnad
+\end{itemize}
+
+\begin{table}[!h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+  \hline
+    Delmoment & Aktivitet & Prioritet & Avsatt tid & Faktiska tid\\ \hline
+    Testdokumentation    & Fortsatta tester och dokumentation av dessa, samt lösning av eventuella buggar      & 1   & 5h         &     \\  \hline
+    \multirow{3}{*}{Presentationslager}   & Slutföra koppling mellan datalager och presentationslager  & 1   & 3h    &     \\ \cline{2-5}
+        & Slutföra presentationslagret inför publicering & 1   & 2h     &     \\ \cline{2-5}
+        & Sista kontroll av design och eventuell dekorativ JavaScript & 3   & 1h         &     \\  \hline
+    Reflektionsdokument  & Fortsatt dokumentation   & 3 & 2h    &    \\   \hline
+    Installationsmanual & Färdigställ eventuell revision för att motsvara projektets krav   & 3 & 1h    &    \\   \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.41}
+\end{table}
+
+Kommentarer:
+\\
+
+\pagebreak
+
+\subsubsection*{Vecka 42}
+\addcontentsline{toc}{subsubsection}{\protect\numberline{}Vecka 42}
+
+Under projektets sista vecka bör endast reflektionsdokumentationen och testdokumentationen finnas kvar att göra. Däremot så avsätts även tid för eventuella korrigeringar på tidigare dokumentation.
+\\
+\\
+Hård deadline
+
+\begin{itemize}
+\color{red}
+    \item 20/10 Testdokumentationen inlämnad
+    \item 20/10 Reflektionsdokumentation inlämnad
+\end{itemize}
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{|l|X|l|l|l|}
+  \hline
+    Delmoment & Aktivitet & Prioritet & Avsatt tid & Faktiska tid\\ \hline
+        Testdokumentation   & Korrekturläsa och färdigställt dokument för inlämning & 1  & 2h   &   \\  \hline
+        Reflektionsdokument & Korrekturläsa och färdigställt dokument för inlämning  & 1  & 2h  & \\  \hline
+        Korrigeringar & Ändra eventuella brister i systemdokumentationen & 1 & 3h  &
+\\   \hline
+\end{tabularx}
+\centering
+    \caption{\label{tab:table-name}Aktiviteterna, dess avsatta tider och faktiska tider, samt prioritering som ska utföras v.42}
+\end{table}
+
+Kommentarer:
+\pagebreak
+\end{document}

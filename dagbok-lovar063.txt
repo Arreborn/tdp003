@@ -1,0 +1,80 @@
+Dagbok - TDP003
+Love Arreborn
+lovar063@student.liu.se
+
+I denna dagbok kommer jag att detaljera arbetet i kursen TDP003, där jag tillsammans med min projektpartner Tove ska skapa en portfolio för att visa upp de arbeten som vi genomför under programmets gång. Värt att notera är att denna dagbok påbörjades lite sent, så det första inlägget skrivs retroaktivt.
+
+--- 2022-08-30 ---
+Under vårt första möte i förberedelesestadiet har vi främst täckt hur vi ämnar att arbeta tillsammans, och börjat arbeta på vårt gruppkontrakt. Vi satte även i detta skede up ett Jira-repository, där vi kommer att detaljera arbetets steg för att enklare kunna hålla koll på alla olika delar n'r vi skriver vårt reflektionsdokument under kursens slutskede.
+
+--- 2022-09-01 ---
+Vi fortsatte detta datum arbetet med vårt gruppkontrakt. Arbetsfördelningen har även konkretiserats under förstudefasen, och Tove kommer att ansvara främst för att skriva ihop vår dokumentation, medan jag kommer att ansvara för LoFi-prototypen. Vi har beslutat att göra prototypen direkt i HTML / CSS för att enklare ha någonting att utgå ifrån när vi senare arbetar.
+
+--- 2022-09-06 ---
+Då deadlinen för att lämna in gruppkontraktet nalkas har vi träffats för att ta en sista överblick av kontraktet innan det skickas in. Vi har stött på vissa problem med att kompilera dokumentet till en PDF som följer mallen, men under detta tillfälle lyckades jag genom lite experimentation lösa kompileringen. Vi har även diskuterat detaljer för tidsplanen, som är nästa del av dokumentationen.
+
+--- 2022-09-13 ---
+Vi fick tillbaka en korrigering på gruppkontraktet som Tove åtgärdat, och innan detta kompileras och skickas in på nytt kommer jag att korrekturläsa ändringarna. Tidsplanen är även den färdigställd av Tove, så jag kommer att korrekturläsa denna för att sedan kompilera och skicka in den. Slutligen har jag idag börjat på LoFi-prototypen, och enligt nuvarande prognos bör den vara färdigställd för att redovisas för Tove och testas av en annan projekt-grupp på onsdag eller torsdag. Den grundläggande layouten börjar ta form, vissa detajer med färg och positioner behöver fortfarande justeras.
+
+--- 2022-09-14 ---
+Idag hade vi seminarium kring projektplanen, vilket gör att vi kan lägga mer krut på detta framöver. Jag fortsätter att arbeta med LoFi-prototypen främst under dagen.
+
+--- 2022-09-15 ---
+Denna dag fokuserar jag ännu en gång på att arbeta med LoFi-prototypen. Jag har främst fokuserat på att få in lite JavaScript som får sidan att bli lite mer modern och levande.
+
+--- 2022-09-16 ---
+LoFi-prototypen färdigställs och skickas in.
+
+--- 2022-09-20 ---
+Under dagen gick vi igenom projektplanen, och förberedde den för inlämning mot slutet av veckan. Komplettering mottogs på LoFi-prototypen, och denna korrigeras samt skickas in under dagen.
+
+--- 2022-09-21 ---
+På grund av undermålig tidshantering från min sida blev inte kompletteringen för lofi-prototypen klar igår, så denna färdigställs och skickas in idag. Jag beslutade också att mitt bidrag till den gemensamma installationsmanualen ska vara att anpassa installationsinstruktionerna för att fungera på fler Linux-distributioner, så att den inte blir Ubuntu-specifik. Detta kommer jag dock att göra närmare deadline för att se till att jag kan anpassa allt som ska installeras på en och samma gång.
+
+--- 2022-09-22 ---
+Idag har vi vårt första schemalagda veckomöte där vi ska stämma av nuvarande status, se över Jira och planera inför kommande vecka. Vi kommer även att titta på projektplanen som ska skickas in idag. När Tove är klar med utkastet till projektplanen kommer jag att korrekturläsa och kompilera filen innan den skickas in.
+
+--- 2022-09-26 ---
+Dagens arbete kretsade kring att få till datalagret, och de funktioner som specificerats för API:n. Detta gick betydligt snabbare än väntat, och vi fick klart samtliga funktioner på under 2h. Imorgon kommer detta att redovisas för en assistent. LoFi-prototypen är dessutom även godkänd, så denna del är helt färdigställd. Kvar att göra är att köra testerna och anpassa koden efter dessa utfall.
+
+--- 2022-09-27 ---
+När testerna kördes så fick vi en hel uppsjö med errors och fails - primärt på de tester som våra kurskamrater har skrivit. Kollar man på de tester som skapats av kursledarna var det ett error, och ett fel. Något jag känner en obligation att poängtera ut är att en del av testfallen som skrivits in av kurskamraterna (främst de som jag lade fokus på) hanterar nischade fall som kommer vårt datalager kommer att ha inbyggt skydd för när datan matas in i JSON-filen - och att anpassa datalagret för att hantera dessa fall blir en enorm arbetsbörda utan att få någon vedertaget resultat. Men oavsett så kommer vi att fortsätta arbeta med testerna under morgondagen, med prioritet på de tester som inte kommer att hanteras när datan matas in.
+
+--- 2022-09-28 ---
+Fortsatt arbete med tester av datalagret idag, med mycket bättre resultat än gårdagen. Vi har även lagt en god mängd tid på att genomföra de korrigeringar i installationsmanualen som inkom i vǻra kompletteringar, vilket har tagit upp majoriteten av tiden vi haft inplanerad idag.
+
+--- 2022-09-29 ---
+Projektplanen har vi sett över lite till, och reviderat de sista detaljerna från kompletteringen. Under labbpasset fick vi ordning på de sista testerna, så under morgondagens labbpass kan vi redovisa vårt datalager. Det enda som är kvar är det test som Pontus explicit sagt att vi inte behöver klara, men om tid finns kommer jag att kika lite extra på det för att se om vi kan få till denna funktionalitet.
+
+--- 2022-09-30 ---
+Vi fick ännu en komplettering på projektplanen, så vi tog tid att prata direkt med Daniel rörande dessa kompletteringar för att få klarhet kring hur vi skulle gå vidare. Datalagret redovisades även utan några större problem, däremot så bör vi se över vissa variabelnamn i koden, något som kapitel 10 - 11 i Code Complete bör vara till god hjälp med. Större delen av tiden idag gick åt att fortsätta arbetet med projektplanen för att kunna lämna in den snarast möjigt.
+
+--- 2022-10-01 ---
+Under gårdagen hann vi inte bli klara med alla justeringar i projektplanen, och vi ägnade drygt två timmar åt att göra de sista ändringarna.
+
+--- 2022-10-04 ---
+Dagens arbete var att påbörja presentationslagret, något som har gått i rasande takt med tanke på att vi redan hade grundläggande HTML/CSS klar från LoFi-prototypen. Att göra prototypen på detta sätt var troligen ett av de bättre besut vi tagit, då det tillät oss att fokusera till hundra procent på att arbeta med de nya teknikerna. Under detta pass lyckades vi få till sidorna index, list och projekt - och allting utom sökningen på listan funderar precis som tänkt. Kvar att göra är att få sökningen och tekniksidan att fungera som vi vill, samt en sista kontroll av designen innan publikation.
+
+--- 2022-10-06 ---
+Med de enklare sidorna nästintill helt klara kunde vi fokusera på att bygga teknik-sidan, samt att börja implementera våra funktioner från datalagret på webbplatsen. Att få in bägge typer av sökningar från datalagret till den faktiska webbplatsen kändes ursprungligen som ett stort problem, men tack vare kreativ problemlösning har vi nu all grundläggande funktionalitet på plats. Det är blott en sak kvar för den slutliga grundläggande funktionaliteten kvar att fixa, därefter kan vi fokusera strikt på designen och systemdokumentationen innan första publikation.
+
+--- 2022-10-10 ---
+Dagens arbete kretsade kring att finslipa den sista funktionaliteten, och ge sidan ett fint utseende så att den är redo för publikation. Vidare så arbetade vi även med systemdokumentationen, och skapade flödesdiagram för denna som visar hur webbsidan väl fungerar.
+
+--- 2022-10-12 ---
+Idag gjordes lite mer arbete på systemdokumentationen, samt vissa små fixar inför publikation. Vi satte även igång med att få systemet redo för att publiceras, men dessvärre stötte vi på problem - möjligen samma problem som andra i kursen stötte på.
+
+--- 2022-10-13 ---
+Idag hade vi systemdemonstration, och vi stötte på fyra problem. Dessa var sanbbt åtgärdade, och borde egentligen ha varit fixade redan innan presentationen. Efter detta låg fullt fokus på systemdokumentationen, som har deadline idag.
+
+--- 2022-10-17 ---
+Sedan det förra inlägget har vi fått ny deadline för publikation den 20/10, vilket ger mig lite mer tid att finslipa lite mindre detaljer på webbplatsen innan publikation. Vidare så tar jag även de sista stegen som krävs för att möjliggöra publikation av portfolion, så att detta kan göras så snart som möjligt. Efter detta är min prioritet att påbörja mitt reflektionsdokument, eftersom jag och min partner idag jobbar separat på distans.
+
+--- 2022-10-18 ---
+Idag har vi tagit emot komplettering på systemdokumentationen som har tagit upp större delen av vår tid. Dock så har vi attackerat detta på delad front, så jag har främst fokuserat på att skriva testdokumentationen. Dessutom har vi bägge två nu publicerat webbsidan, och det enda som är kvar bortsett från eventuella kompletteringar är reflektionsdokumentet och muntan.
+
+--- 2022-10-19 ---
+Dagens arbete kretsade helt kring reflektionsdokumentet, och jag har inte mycket jag kan tillägga på denna punkt.
+
+--- 2022-10-20 ---
+Även idag fokuserade jag helt på reflektionsdokumentet som färdigställdes och skickades in, samt att jag förbereder mig lite inför muntan.

@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block title %}
+Djurinfo
+{% endblock %}
+{% block body %}
+<h2>Info om djur</h2>
+<ul>
+	<li>Art: {{ animal.type }}</li>
+	<li>Namn: {{ animal.name }}</li>
+	<li>Ben: {{ animal.legs }}
+		{% for l in legs %}
+		🦵
+		{% endfor %}
+	</li>
+</ul>
+{% if animal.image %}
+<img src="{{ url_for("static", filename=animal.image) }}" />
+{% endif %}
+
+<form action="{{ url_for("remove") }}" method="POST">
+	<input type="hidden" value="{{ id }}" name="id" />
+	<input type="submit" value="Ta bort🧛" />
+</form>
+{% endblock %}

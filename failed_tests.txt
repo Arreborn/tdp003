@@ -1,0 +1,4 @@
+- Ta höjd för felkoder 404, 500, 400
+- ID på projekt ska vara .../projects/<id>
+- Ej hittade projekt ska inte returnera en projektsida utan 404
+- Stigande / Fallande datum är i fel ordning
